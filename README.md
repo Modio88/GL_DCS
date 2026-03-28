@@ -12,5 +12,4 @@ Another way: running gls_che_windows.py Select an input image folder and click t
 # Result
 The results are saved in the folder containing the image <br>
         <br>
-                <br>
 ![window](GL_DCS.png)
