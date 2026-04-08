@@ -13,3 +13,7 @@ Another way: running gls_che_windows.py Select an input image folder and click t
 The results are saved in the folder containing the image <br>
         <br>
 ![window](GL_DCS.png)
+ <br>
+Checkpoints(Weights) <br>
+The files are too large to upload. If you would like to receive them, please don’t hesitate to contact us.<br>
+E-mail:lushche@163.com
