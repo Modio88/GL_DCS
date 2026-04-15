@@ -20,7 +20,7 @@ def gl_detect(in_tif,band):
         final_gdf=[]
         tif_path = os.path.join(in_tif, tif_file)
         rgb = tif_to_rgb(tif_path)
-        fname = tif_file[:8]
+        fname = tif_file.rsplit('.', 1)[0]
         out_p = os.path.join(in_tif, fname)
         # 1裁剪影像
         name512 = fname + 'cropped'
@@ -71,7 +71,7 @@ def gl_cls(in_tif):
 
         tif_path = os.path.join(in_tif, tif_file)
         rgb=tif_to_rgb(tif_path)
-        fname=tif_file[:8]
+        fname = tif_file.rsplit('.', 1)[0]
         out_p=os.path.join(in_tif,fname)
         # 1裁剪影像
         name512=fname+'cropped'
@@ -93,6 +93,9 @@ def gl_cls(in_tif):
         os.makedirs(txt_dir, exist_ok=True)
         detect_gl(tiff_dir,txt_dir,band=8)
         print("3冰湖检测完成")
+        if os.path.exists(txt_dir) and len(os.listdir(txt_dir)) == 0:
+            print(f"⚠️  检测结果文件夹为空，跳过当前：{fname}，处理下一张影像")
+            continue  # 直接进入下一个循环
         #4用检测目标裁剪tiff
         lake_labels_path=os.path.join(txt_dir,'labels')
         lake_tiff=fname+'lake_tiff'
@@ -117,7 +120,7 @@ def gl_cls(in_tif):
         print("7冰湖矢量地图完成")
         #8属性连接
         xlsx_path=os.path.join(cls_file,'cls_gl.xlsx')
-        output_shp=os.path.join(out_p, fname+'cls.shp')
+        output_shp=os.path.join(in_tif, fname+'cls.shp')
         gdf_joined=join_table_xlsx(shp_path, xlsx_path)
         gdf_joined.to_file(output_shp, driver="ESRI Shapefile", encoding="utf-8")
         print("8属性连接完成")
@@ -125,6 +128,7 @@ def gl_cls(in_tif):
         delete_folder_if_exists(tif_dir)
         delete_folder_if_exists(tiff_dir)
         delete_folder_if_exists(lake_dir)
+        delete_folder_if_exists(water_dir)
 
     return rgb,gdf_joined
 
