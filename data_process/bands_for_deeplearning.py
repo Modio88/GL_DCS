@@ -137,7 +137,9 @@ def to_tiff(input_path,out_path):
         for key in sorted(bands.keys()):
             bands[key] = bands[key] * mask
             bands[key][np.isnan(bands[key])] = np.nanmin(bands[key])
-            band_array = bands[key].astype(np.float64)
+            band_array = bands[key].astype(np.float32)
+            p2, p98 = np.nanpercentile(band_array, (1, 99))
+            band_array = np.clip(band_array, p2, p98)
             band_array =(255* (band_array - np.nanmin(band_array)) / (np.nanmax(band_array) - np.nanmin(band_array))).astype(np.uint8)
             outimg_list.append(band_array)
         outimg = np.array(outimg_list)
