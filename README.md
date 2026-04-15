@@ -1,6 +1,6 @@
 # GL_DCS
 An automatic detection and classification system for glacial lake <br>
-This is the official implementation of the paper "Automatic detection and classification for glacial lakes using multi-type computer vision tasks with deep learning"<br>
+This is the official implementation of the paper "Automated glacial lake inventory through a multi-task deep learning framework"<br>
 Authors:Lusheng Che, Quntao Duan, Baili Chen, Renjie Huang, Tingting Sun, Kaiyu Liu, Lihui Luo*
 # Installation
 This system is based on the YOLO26 and SAM2 models. For instructions on setting up the runtime environment, please refer to the link below.
