@@ -183,9 +183,9 @@ def boundary_watern(tif_folder,output_dir):
 
         # ========== 读取YOLO结果txt ==========
         row_min=49
-        row_max=ref_height-70
+        row_max=ref_height-50
         col_min=49
-        col_max=ref_width-70
+        col_max=ref_width-50
 
         crop_array = img_array[:, row_min:row_max, col_min:col_max]
         if np.isnan(crop_array[0]).all() or np.isnan(crop_array[1]).all() or np.isnan(crop_array[2]).all() :
