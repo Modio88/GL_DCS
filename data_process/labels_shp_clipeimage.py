@@ -20,7 +20,7 @@ def shp_clipe_tif(tif_path,shp_path,out_dir,tiff_dir,task):
     filename_field = "filename"
 
     # 向外扩展像元数
-    expand_pixels = 80
+    expand_pixels = 70
 
     os.makedirs(out_dir, exist_ok=True)
 
