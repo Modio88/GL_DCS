@@ -6,9 +6,6 @@ Authors:Lusheng Che, Quntao Duan, Baili Chen, Renjie Huang, Tingting Sun, Kaiyu 
 This system is based on the YOLO26 and SAM2 models. For instructions on setting up the runtime environment, please refer to the link below.
 YOLO26:https://github.com/ultralytics/ultralytics
 SAM2:https://github.com/facebookresearch/sam2?tab=readme-ov-file
-# Study Area
-This system is developed based on  multisource satellite imagery across the Hindu Kush-Himalaya.<br>
-![window](Study_area.png)
 # Run
 One way: running main.py Edit Modify the image folder and task parameters(in_tif,task) <br>
 Another way: running gls_che_windows.py Select an input image folder and click task (gl_classify or gl_detect)
@@ -17,12 +14,15 @@ The results are saved in the folder containing the image. <br>
         <br>
 ![window](GL_DCS.png)
  <br>
+# Study Area
+This system is developed based on  multisource satellite imagery across the Hindu Kush-Himalaya.<br>
+![window](Study_area.png)
 # Accuracy
 For glacial lake detection, achieving a  Precision  of 0.948, Recall of 0.877, AP50 of 0.921, and AP50-95 of 0.628.<br>
-![window](Accuracy of detection.png)
+![window](Accuracy_of_detection.png)
 <br>
 For glacial lake classification, achieving a Top-1 Accuracy of 0.767.<br>
-![window](Accuracy of classification.png)
+![window](Accuracy_of_classification.png)
 <br>
 Checkpoints(Weights) <br>
 The files are too large to upload. If you would like to receive them, please don’t hesitate to contact us.<br>
