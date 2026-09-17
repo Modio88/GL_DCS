@@ -8,7 +8,7 @@ YOLO26:https://github.com/ultralytics/ultralytics
 SAM2:https://github.com/facebookresearch/sam2?tab=readme-ov-file
 # Study Area
 This system is developed based on  multisource satellite imagery across the Hindu Kush-Himalaya.<br>
-![window](Study Area.png)
+![window](Study_area.png)
 # Run
 One way: running main.py Edit Modify the image folder and task parameters(in_tif,task) <br>
 Another way: running gls_che_windows.py Select an input image folder and click task (gl_classify or gl_detect)
