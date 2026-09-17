@@ -20,6 +20,7 @@ The results are saved in the folder containing the image. <br>
 # Accuracy
 For glacial lake detection, achieving a  Precision  of 0.948, Recall of 0.877, AP50 of 0.921, and AP50-95 of 0.628.<br>
 ![window](Accuracy of detection.png)
+<br>
 For glacial lake classification, achieving a Top-1 Accuracy of 0.767.<br>
 ![window](Accuracy of classification.png)
 <br>
